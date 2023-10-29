@@ -16,7 +16,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} end />
-          <Route path='/login' element={<Login />} />
+          {/* indica que haverá outras rotas aninhadas a partir de login */}
+          <Route path='/login/*' element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
